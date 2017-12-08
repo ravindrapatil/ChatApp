@@ -13,10 +13,7 @@ export class UserListComponent implements OnInit {
 
   constructor(private chatSrvc: ChatService) {
     chatSrvc.getUsers().subscribe(usersa => {
-      // this.users = usersa;
-      usersa.forEach(model => {
-        this.users.push(model.items);
-      });
+      this.users = usersa;
     });
   }
 
