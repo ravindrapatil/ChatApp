@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <button class="navbar-toggler navbar-toggler-right" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarResponsive"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars fa-4" aria-hidden="true"></i>
+  </button>
+  <a class="navbar-brand" href="#">{{title}}</a>
+
+  <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed" id="navbarResponsive">
+    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+      <li class="nav-item" >
+        <a class="nav-link" *ngIf="!(user|async)?.uid" (click)="loginPage()">
+          <span class="nav-link-text">Login</span>
+        </a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" *ngIf="!(user|async)?.uid" routerLink="/signup">
+          <span class="nav-link-text">Sign Up</span>
+        </a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" id="userEmail" *ngIf="(user|async)?.uid">
+          <span class="nav-link-text">Hello, {{userEmail}}</span>
+        </a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" *ngIf="(user|async)?.uid" (click)="logout()">
+          <span class="nav-link-text">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+

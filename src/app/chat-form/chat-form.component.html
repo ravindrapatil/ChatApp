@@ -1,0 +1,8 @@
+<div class="row" style="padding-top:20px; padding-bottom:20px">
+    <div class="col-md-11 col-sm-11">
+        <input type="text" class="form-control" [(ngModel)]="message" (keydown)="handleSubmit($event)" />
+    </div>
+    <div class="col-md-1 col-sm-1">
+        <button class="btn btn-success" (click)="send()">Send</button>
+    </div>
+</div>

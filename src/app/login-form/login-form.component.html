@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+      <form>
+        <h4>Login</h4>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" [(ngModel)]="email" name="email"
+            maxlength="60" required />
+        </div>
+  
+        <div class="form-group">
+          <label for="passwordId">Email address</label>
+          <input type="password" name="password" class="form-control" id="passwordId" placeholder="Enter password" [(ngModel)]="password"
+            required />
+        </div>
+        <button class="btn btn-primary" (click)="login()">Login</button>
+      </form>
+      </div>
+    </div>
+  </div>

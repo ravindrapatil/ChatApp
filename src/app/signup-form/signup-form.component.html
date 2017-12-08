@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+    <form #signupForm="ngForm">
+      <h4>Sign Up</h4>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" [(ngModel)]="email" name="email"
+          maxlength="60" required />
+      </div>
+
+      <div class="form-group">
+        <label for="passwordId">Email address</label>
+        <input type="password" name="password" class="form-control" id="passwordId" placeholder="Enter password" [(ngModel)]="password"
+          required />
+      </div>
+
+      <div class="form-group">
+        <label for="displayNameId">Display Name</label>
+        <input type="text" name="displayName" class="form-control" id="displayNameId" placeholder="Enter displayName" [(ngModel)]="displayName"
+          maxlength="12" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary" (click)="signUp()">Sign Up</button>
+    </form>
+    </div>
+  </div>
+</div>
