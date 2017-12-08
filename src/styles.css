@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #e8e8e8 !important;
+}
+
+.bg-dark {
+    background-color: #024c86 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.chat-form {
+    padding-top:20px; padding-bottom:20px
+}
+
+.chat-form .form-control {
+    border: 1px solid #4295d6 !important;
+}
